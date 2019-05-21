@@ -1,0 +1,134 @@
+@import "./variables";
+header {
+    background: rgb(21,123,173);
+    background: radial-gradient(circle, rgba(21,123,173,1) 10%, rgba(5,55,100,1) 80%);
+}
+
+// Navbar
+
+nav {
+    display: flex;
+    align-items: center;
+    min-height: 123px;
+    background-color: #fff;
+}
+
+.menu {
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 0;
+
+        li {
+            float: left;
+            padding-right: 16px;
+            &::after {
+                content: '';
+                display: block;
+                margin-top: 17px;
+                height: 3px;
+                width: 0px;
+                background: transparent;
+                transition: width .5s ease, background-color .5s ease;
+            }
+            &:hover::after {
+                width: 100%;
+                background: $primaryColor;
+            }
+        }
+        
+        li.active {
+            &::after {
+                content: '';
+                display: block;
+                margin-top: 17px;
+                height: 3px;
+                width: 100%;
+                background: $primaryColor;
+            }
+        }
+
+        li:last-child {
+            padding-right: 0;
+        }
+    }
+
+    a {
+        color: #484848;
+        text-transform: uppercase;
+        font-size: 0.938em;
+        text-decoration: none;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            height: 15px;
+            border-right: 1px solid black;
+            top: 3px;
+            right: -7px;
+        }
+    }
+}
+
+.phone a {
+    float:  right;
+    color: $primaryColor;
+    font-weight: bold;
+    font-size: 1.875em;
+    text-decoration: none;
+}
+
+// Hero
+.hero {
+    color: #fff;
+    
+    .ml {
+        margin-left: 6.3333%;
+    }
+
+    ul li {
+        padding-bottom: 31px;
+        font-weight: bold;
+        font-size: 1.250em;
+    }
+
+    ul li:last-child {
+        padding: 0;
+    }
+
+    .order {
+        text-align: center;
+        margin-top: 66px;
+        padding-bottom: 60px;
+
+        .btn {
+            width: 225px;
+            font-size: 1.125em;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: $secondaryColor;
+            outline: none;
+            transition: .3s ease-in-out;
+        }
+        .btn:hover {
+            background-color: #ff7b00;
+        }
+    }
+}
+
+.title {
+    text-align: center;
+    margin-top: 55px;
+
+    h1 {
+        font-size: 2.063em;
+        margin-bottom: 29px;
+    }
+
+    p {
+        font-size: 0.938em;
+        padding: 0 185px;
+        margin-bottom: 65px;
+    }
+}

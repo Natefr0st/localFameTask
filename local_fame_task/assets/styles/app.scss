@@ -1,0 +1,20 @@
+@import "./variables";
+@import "./header";
+@import "./benefits";
+@import "./membership";
+@import "./footer";
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+html {
+    font-family: $raleway;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: $raleway;
+}
+
+ul {
+    list-style: none;
+}

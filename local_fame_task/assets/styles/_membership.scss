@@ -1,0 +1,42 @@
+@import "./variables";
+
+.membership {
+    margin: 56px 0 0 0  ;
+    .title, .subtitle {
+        text-align: center;
+    }
+    h2 {
+        font-size: 2em;
+        color: #015b98;
+        margin-bottom: 35px;
+    }
+    .subtitle {
+        font-size: 0.938em;
+        margin-bottom: 71px;
+    }
+    .desc {
+        font-size: 0.938em;
+        color: #707070;
+    }
+    .desc:first-child {
+        margin-bottom: 57px;
+    }
+    .desc:nth-child(2) {
+        margin-bottom: 78px;
+    }
+    .desc:nth-child(3) {
+        margin-bottom: 61px;
+    }
+    .desc:last-child {
+        margin-bottom: 54px;
+    }
+    .desc span {
+        padding-right: 5px;
+    }
+    .laptop {
+        margin-top: 70px;
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import "./variables";
+
+.benefits {
+    background-color: #f7f7f7;
+    position: relative;
+    .service {
+        margin: 84px 0 92px 0;
+        text-align: center;
+        h3 {
+            color: #0a4d80;
+            margin: 41px 0 35px 0;
+            font-size: 1.375em;
+        }
+        p {
+            font-size: 1.125em;
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../img/arrow1.png') no-repeat;
+        width: 78px;
+        height: 20px;
+        top: 58px;
+        left: 39%;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        background: url('../img/arrow2.png') no-repeat;
+        width: 78px;
+        height: 20px;
+        bottom: 55px;
+        right: 37%;
+    }
+}
