@@ -1,0 +1,105 @@
+@import "./variables";
+
+// Mobile Button
+
+.btn-mobile {
+    width: 35px;
+    position: relative;
+    margin-top: 10px;
+    z-index: 300;
+}
+
+.btn-mobile.active {
+    position: fixed;
+    top: 4%;
+    left: 10px;
+}
+
+.btn-mobile::before,
+.btn-mobile > div,
+.btn-mobile::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #95cdfe;
+    border-radius: 50px;
+    transition: .5s;
+}
+
+.btn-mobile::before {
+    margin-bottom: 5px;
+}
+
+.btn-mobile > div {
+    position: relative;
+    left: 0;
+    transition: .5s;
+}
+
+.btn-mobile::after {
+    margin-top: 5px;
+}
+
+.btn-mobile.active::before {
+    transform: rotateZ(45deg);
+    transform-origin: 0 50%;
+    position: relative;
+    bottom: 2px;
+    left: 5px;
+}
+
+.btn-mobile.active div {
+    opacity: 0;
+}
+
+.btn-mobile.active::after {
+    margin-top: 5px;
+    transform: rotateZ(-45deg);
+    transform-origin: 0 50%;
+    position: relative;
+    top: 4px;
+    left: 5px;
+}
+
+
+/* End Mobile Button */
+
+/* Mobile Menu */
+
+.mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    // background-color: $primaryColor;
+    background: rgb(51,51,51);
+    background: radial-gradient(circle, rgba(51,51,51,1) 71%, rgba(17,17,17,1) 100%);
+    z-index: 100;
+    top: 0;
+    left: -100%;
+    transition: .3s;
+    padding: 65% 50px 50px 50px;
+}
+
+.mobile-menu.open {
+    left: 0;
+}
+
+.mobile-menu ul {
+    text-align: center;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 30px;
+}
+
+.mobile-menu ul li a {
+    display: inline-block;
+    color: #95cdfe;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* End Mobile Menu */

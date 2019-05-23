@@ -6,13 +6,39 @@
     .service {
         margin: 84px 0 92px 0;
         text-align: center;
+        &:first-child {
+            @include for-phones {
+                margin: 75px 0 48px 0;
+            }
+        }
+        &:nth-child(2) {
+            @include for-phones {
+                margin: 0 0 56px 0;
+            }
+            @include for-tablets {
+                margin: 0;
+            }
+        }
+        &:last-child {
+            @include for-phones {
+                margin: 0 0 69px 0;
+            }
+        }
         h3 {
             color: #0a4d80;
             margin: 41px 0 35px 0;
             font-size: 1.375em;
+            @include for-phones {
+                font-size: 1.875em;
+                margin: 35px 0 29px 0;
+            }
         }
         p {
             font-size: 1.125em;
+            @include for-phones {
+                font-size: 1.438em;
+                padding: 0 35px;
+            }
         }
     }
     &::before {
@@ -23,6 +49,16 @@
         height: 20px;
         top: 58px;
         left: 39%;
+        @include for-phones {
+            transform: rotate(90deg);
+            top: 32%;
+            left: 84%;
+        }
+        @include for-tablets {
+            transform: rotate(90deg);
+            top: 32%;
+            left: 84%;
+        }
     }
     &::after {
         content: '';
@@ -32,5 +68,15 @@
         height: 20px;
         bottom: 55px;
         right: 37%;
+        @include for-phones {
+            transform: rotate(90deg);
+            top: 63%;
+            right: 83%;
+        }
+        @include for-tablets {
+            transform: rotate(90deg);
+            top: 63%;
+            right: 83%;
+        }
     }
 }

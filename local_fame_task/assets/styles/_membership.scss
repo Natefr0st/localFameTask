@@ -9,14 +9,30 @@
         font-size: 2em;
         color: #015b98;
         margin-bottom: 35px;
+        @include for-phones {
+            padding: 0 50px;
+        }
     }
     .subtitle {
         font-size: 0.938em;
-        margin-bottom: 71px;
+        margin-bottom: 0;
+        @include for-phones {
+            padding: 0 5px;
+        }
+        @include for-tablets {
+            margin-bottom: 50px;
+            font-size: 1em;
+        }
     }
     .desc {
         font-size: 0.938em;
         color: #707070;
+        @include for-phones {
+            padding: 0 36px;
+        }
+        @include for-tablets {
+            font-size: 1em;
+        }
     }
     .desc:first-child {
         margin-bottom: 57px;
@@ -32,11 +48,27 @@
     }
     .desc span {
         padding-right: 5px;
+        @include for-phones {
+            font-size: 1.500em;
+        }
+        @include for-tablets {
+            font-size: 1.500em;
+        }
     }
     .laptop {
         margin-top: 70px;
+        @include for-phones {
+            text-align: center;
+            margin: 33px 0 56px 0;
+        }
+        @include for-tablets {
+            margin-bottom: 65px;
+        }
         img {
             width: 100%;
+            @include for-phones {
+                width: 75%;
+            }
         }
     }
 }

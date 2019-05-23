@@ -1,7 +1,13 @@
 @import "./variables";
+
 header {
     background: rgb(21,123,173);
     background: radial-gradient(circle, rgba(21,123,173,1) 10%, rgba(5,55,100,1) 80%);
+    // .container {
+    //     @include for-phones {
+    //         padding: 0;
+    //     }
+    // }
 }
 
 // Navbar
@@ -11,6 +17,21 @@ nav {
     align-items: center;
     min-height: 123px;
     background-color: #fff;
+    .logo {
+        @include for-phones {
+            padding-left: 30px;
+        }
+        img {
+            @include for-tablets {
+                width: 85%;
+            }
+        }
+    }
+    .nav-mobile {
+        img {
+            width: 90%;
+        }
+    }
 }
 
 .menu {
@@ -77,11 +98,32 @@ nav {
     font-weight: bold;
     font-size: 1.875em;
     text-decoration: none;
+    @include for-tablets {
+        font-size: 1.375em;
+    }
 }
 
 // Hero
 .hero {
     color: #fff;
+
+    .row {
+        text-align: center;
+        margin-top: 59px;
+    }
+    .items {
+        position: relative;
+        margin-bottom: 36px;
+    }
+    h2 {
+        text-decoration: underline;
+        margin-bottom: 0;
+        font-size: 1.875em;
+    }
+    h3 {
+        text-transform: uppercase;
+        font-size: 1.250em;
+    }
     
     .ml {
         margin-left: 6.3333%;
@@ -101,6 +143,10 @@ nav {
         text-align: center;
         margin-top: 66px;
         padding-bottom: 60px;
+        @include for-phones {
+            margin-top: 12px;
+            padding-bottom: 38px;
+        }
 
         .btn {
             width: 225px;

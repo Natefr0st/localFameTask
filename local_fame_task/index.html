@@ -4,24 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- AOS -->
+    <link rel="stylesheet" href="assets/styles/aos.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
     <title>Local Fame Task</title>
 </head>
 <body>
+    <i class="far fa-arrow-alt-circle-up" id="top"></i>
     <!-- Header -->
     <header>
+        <div class="mobile-menu">
+            <ul>
+                <li class="active"><a href="#" title="Home">
+                    home
+                </a></li>
+                <li><a href="#" title="Menu">
+                    menu
+                </a></li>
+                <li><a href="#" title="Gallery">
+                    gallery
+                </a></li>
+                <li><a href="#" title="Contact">
+                    contact us
+                </a></li>
+            </ul>
+        </div>
         <!-- Navbar -->
         <nav>
             <div class="container">
+                <!-- Show on mobile only -->
+                <div class="nav-mobile">
+                    <div class="btn-mobile d-inline-block d-sm-none">
+                        <div></div>
+                    </div>
+                    <a href="#" class="logo d-inline-block d-sm-none" title="Logo">
+                        <img src="assets/img/logo.png" alt="logo">
+                    </a>
+                    <a href="tel:777-7777-7777" class="d-inline-block d-sm-none" title="Phone"><img src="assets/img/phone.png" alt="phone"></a>
+                </div>
+                <!-- Show on mobile only END -->
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 d-none d-md-block">
                         <a href="#" class="logo" title="Logo">
                             <img src="assets/img/logo.png" alt="logo">
                         </a>
                     </div>
-                    <div class="menu col-lg-4">
+                    <div class="menu col-lg-4 col-md-4 d-none d-md-block">
                         <ul>
                             <li class="active"><a href="#" title="Home">
                                 home
@@ -37,20 +69,38 @@
                             </a></li>
                         </ul>
                     </div>
-                    <div class="phone col-lg-4">
-                        <a href="tel:777-7777-7777" title="Phone">777 7777 7777</a>
+                    <div class="phone col-lg-4 col-md-4">
+                        <a href="tel:777-7777-7777" class="d-none d-md-block" title="Phone">777 7777 7777</a>
                     </div>
                 </div>
             </div>
         </nav>
         <div class="hero">
             <div class="container">
-                <div class="title">
+                <div class="title d-none d-lg-block">
                     <h1>Morbi at viverra neque. Nulla fermentum justo</h1>
                     <p>Vivamus tincidunt id nisl ut cursus. Donec felis dui, fringilla in leo at, gravida sollicitudin dui. Ut eu tellus vehicula, hendrerit enim nec, faucibus lacus.eros,</p>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3 offset-lg-3">
+                    <!-- Show on mobile only -->
+                    <div class="col-sm-12 d-block d-sm-none items item1">
+                        <h2>Chocolate Cake</h2>
+                        <h3>from £39</h3>
+                    </div>
+                    <div class="col-sm-12 d-block d-sm-none items item2">
+                        <h2>Pancakes</h2>
+                        <h3>from £49</h3>
+                    </div>
+                    <div class="col-sm-12 d-block d-sm-none items item3">
+                        <h2>Banana Muffins</h2>
+                        <h3>from £45</h3>
+                    </div>
+                    <div class="col-sm-12 d-block d-sm-none items item4">
+                        <h2>Strawberry Ice Cream</h2>
+                        <h3>from £10</h3>
+                    </div>
+                    <!-- Show on mobile only END -->
+                    <div class="col-lg-3 col-md-6 offset-lg-3 d-none d-sm-block">
                         <ul>
                             <li>Chocolate Cake</li>
                             <li>Pancakes</li>
@@ -61,7 +111,7 @@
                             <li>Snickers</li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 ml">
+                    <div class="col-lg-3 col-md-4 ml d-none d-sm-block">
                         <ul>
                             <li>from £39</li>
                             <li>from £49</li>
@@ -83,17 +133,17 @@
     <section class="benefits">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 service">
+                <div class="col-lg-4 service" data-aos="fade-up">
                     <img src="assets/img/benefit1.png" alt="service">
                     <h3>Choose a cake</h3>
                     <p>Fusce et lectus sed tortor consectetur consequat id sed diam.</p>
                 </div>
-                <div class="col-lg-4 service">
+                <div class="col-lg-4 service" data-aos="fade-up">
                     <img src="assets/img/benefit2.png" alt="service">
                     <h3>Contact out operator</h3>
                     <p>Nullam a dictum metus. Suspendisse potenti.</p>
                 </div>
-                <div class="col-lg-4 service">
+                <div class="col-lg-4 service" data-aos="fade-up">
                     <img src="assets/img/benefit3.png" alt="service">
                     <h3>Make an Order</h3>
                     <p style="padding: 0 26px">Mauris ut pretium diam, a finibus nisl. </p>
@@ -107,13 +157,17 @@
                 <h2 class="title">Donec elementum sit amet eros vitae molestie.</h2>
                 <p class="subtitle">Maecenas dignissim nibh at ullamcorper vehicula. Donec quis elit ac quam congue placerat. Duis quis est id risus dignissim vestibulum.Vestibulum tincidunt metus ut turpis pulvinar laoreet. Quisque consectetur id tortor eget vestibulum. Phasellus ac mollis mi. Phasellus vel turpis et dolor ultricies faucibus. Suspendisse elementum </p>
                 <div class="row">
-                    <div class="col-lg-5">
+                    <!-- Show on mobile only -->
+                    <div class="laptop d-block d-sm-none" data-aos="zoom-in">
+                        <img src="assets/img/laptop.jpg" alt="laptop">
+                    </div>
+                    <div class="col-lg-5" data-aos="zoom-in">
                         <p class="desc"><span>1.</span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent suscipit nibh vel diam fringilla viverra. Aliquam eu mollis leo.</p>
                         <p class="desc"><span>2.</span>Suspendisse elementum ante tortor, ac imperdiet enim lacinia non. Quisque non felis id risus aliquam hendrerit tempor ut urna.</p>
                         <p class="desc"><span>3.</span>Quisque vitae sollicitudin nisl. Maecenas dignissim nibh at ullamcorper vehicula. Donec quis elit ac quam congue placerat. Duis quis est id risus dignissim vestibulum. Quisque vitae sollicitudin nisl. Maecenas dignissim nibh at ullamcorper vehicula. Donec quis elit ac quam congue placerat. Duis quis est id risus dignissim vestibulum.</p>
                         <p class="desc"><span>4.</span>Etiam elementum, neque, ut viverra dapibus, est saoien porta augue, non ornare metus turpis a nisi. Cras ac pretium nisl. Praesent sed ultricies augue. Mauris at facilisis dui, ut consequat nibh.</p>
                     </div>
-                    <div class="col-lg-7 laptop">
+                    <div class="col-lg-7 d-none d-sm-block laptop" data-aos="zoom-in">
                         <img src="assets/img/laptop.jpg" alt="laptop">
                     </div>
                 </div>
@@ -133,7 +187,9 @@
             <p>&copy; Sed gravida lacus at est vestibulum elementum vitae in odio. Vestibulum pulvinar pulvinar dui sit amet hendrerit.</p>
         </div>
     </footer>
+    <script src="assets/js/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
+                            <!-- MADE WITH <3 AND COFFEE -->
 </html>
