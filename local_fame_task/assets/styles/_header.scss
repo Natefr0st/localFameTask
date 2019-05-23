@@ -19,9 +19,13 @@ nav {
     background-color: #fff;
     .logo {
         @include for-phones {
-            padding-left: 30px;
+            padding: 0 5px 0 15px;
+            text-align: center;
         }
         img {
+            @include for-phones {
+                widows: 80%;
+            }
             @include for-tablets {
                 width: 85%;
             }
