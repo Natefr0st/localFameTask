@@ -118,6 +118,10 @@ nav .nav-mobile img {
   color: #fff;
 }
 
+.hero .la {
+  text-align: left;
+}
+
 .hero .row {
   text-align: center;
   margin-top: 59px;
